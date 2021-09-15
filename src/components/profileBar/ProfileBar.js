@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ProfileBar.css";
+import styles from "./ProfileBar.module.css";
 
 const ProfileBar = () => <h1>ProfileBar</h1>;
 

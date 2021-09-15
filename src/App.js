@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import styles from "./App.module.css";
 import {
 	Feed,
 	Header,
@@ -8,16 +8,16 @@ import {
 	Stories,
 } from "./components";
 
-function App() {
+const App = () => {
 	return (
-		<>
+		<div className={styles.containerParent}>
 			<Header />
 			<Feed />
 			<ProfileBar />
 			<ProfilePicture />
 			<Stories />
-		</>
+		</div>
 	);
-}
+};
 
 export default App;
