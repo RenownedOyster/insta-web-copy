@@ -29,6 +29,11 @@
 	text-transform: capitalize;
 }
 
+.navItems {
+	display: flex;
+	align-items: center;
+}
+
 .navItems > *:nth-child(-n + 3) {
 	padding-right: 24px;
 }

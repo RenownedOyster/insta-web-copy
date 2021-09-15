@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { ProfilePicture } from "../../components";
 import { ReactComponent as Heart } from "../../assets/images/heart.svg";
 import { ReactComponent as Home } from "../../assets/images/home.svg";
 import Logo from "../../assets/images/logo.png";
@@ -16,7 +17,14 @@ const Header = () => (
 			<div className={styles.navItems}>
 				<Heart />
 				<Home />
-				<div className={styles.icon}></div>
+				<ProfilePicture
+					size="small"
+					source={
+						"https://flynn.boolean.careers/exercises/img/boolgram/profile1.jpg"
+					}
+					hasBorder={false}
+					altText="Heading profile picture"
+				/>
 			</div>
 		</div>
 	</header>

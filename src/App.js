@@ -14,7 +14,12 @@ const App = () => {
 			<Header />
 			<Feed />
 			<ProfileBar />
-			<ProfilePicture />
+			<ProfilePicture
+				source={
+					"https://flynn.boolean.careers/exercises/img/boolgram/profile1.jpg"
+				}
+				altText="Heading profile picture"
+			/>
 			<Stories />
 		</div>
 	);
