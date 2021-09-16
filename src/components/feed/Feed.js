@@ -6,7 +6,6 @@ import { ReactComponent as Heart } from "../../assets/images/heart.svg";
 import { ReactComponent as Elipsis } from "../../assets/images/elipsis.svg";
 import { ReactComponent as SpeechBubble } from "../../assets/images/speechBubble.svg";
 import Gray from "../../assets/images/gray.png";
-import GraySmall from "../../assets/images/graySmall.png";
 
 const Post = (props) => (
 	<article className={styles.postParent}>
