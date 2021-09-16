@@ -20,7 +20,7 @@ const PictureWithText = (props) => {
 	);
 };
 
-const iterateThroughResults = (results) =>
+const compileStories = (results) =>
 	results
 		.slice(0, 6)
 		.map((result, i) => (
@@ -35,7 +35,7 @@ const Stories = (props) => (
 	<section className={styles.storiesParent}>
 		{props.hasLoaded ? (
 			<div className={styles.storiesChildren}>
-				{iterateThroughResults(props.activeStories)}
+				{compileStories(props.activeStories)}
 			</div>
 		) : (
 			<div className={styles.storiesChildren}>

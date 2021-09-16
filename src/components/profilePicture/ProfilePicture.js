@@ -8,6 +8,7 @@ const ProfilePicture = (props) => (
 			[styles.logoWrapper]: props.hasBorder,
 			[styles.default]: props.size === "default",
 			[styles.small]: props.size === "small",
+			[styles.medium]: props.size === "medium",
 		})}
 	>
 		{props.source ? (

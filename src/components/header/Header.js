@@ -12,7 +12,7 @@ const Header = () => (
 			<input
 				type="text"
 				className={styles.searchBox}
-				placeholder="search"
+				placeholder="Cerca"
 			/>
 			<div className={styles.navItems}>
 				<Heart />

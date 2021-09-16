@@ -1,0 +1,102 @@
+.feedParent {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+}
+
+.feedParent > * {
+	margin-top: 40px;
+}
+
+.postParent {
+	position: relative;
+	width: 100%;
+	border-radius: 2px;
+	background: #fff;
+	border: 1px solid #dfdfdf;
+}
+
+.postHeader {
+	width: calc(100% - 40px);
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.profileName {
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.offText {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.daysAgoBar {
+	margin-top: 30px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.postPictureheader {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.postImage {
+	min-width: 100%;
+	object-fit: cover;
+}
+
+.postBody {
+	margin: 15px;
+}
+
+.ctaBar {
+	height: 40px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.ctaBar > * {
+	padding-right: 20px;
+}
+
+.likeBar {
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.likeProfileText {
+	margin-left: 10px;
+}
+
+.descriptionBar {
+	width: 100%;
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.commentFooter {
+	width: calc(100% - 17px);
+	height: 50px;
+	border: none;
+	border-top: 1px solid #dfdfdf;
+	padding-left: 15px;
+	font-size: 16px;
+}
+
+.publish {
+	position: absolute;
+	font-size: 16px;
+	bottom: 5px;
+	right: 15px;
+	color: #0095f6;
+}

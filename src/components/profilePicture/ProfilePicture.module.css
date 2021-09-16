@@ -25,6 +25,13 @@
 	border-radius: 56px;
 }
 
+.medium,
+.medium img {
+	height: 35px !important;
+	width: 35px !important;
+	border-radius: 35px;
+}
+
 .small,
 .small img {
 	height: 22px !important;
