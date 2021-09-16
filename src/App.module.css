@@ -9,6 +9,7 @@
 	background-color: #fafafa;
 	min-height: 100vh;
 }
+
 .main {
 	max-width: 946px;
 	margin: 0 auto;
@@ -22,4 +23,16 @@
 
 .asideParent {
 	min-width: 239px;
+}
+
+.loading {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	z-index: 4;
+	height: 100px;
+	width: 100px;
+}
+.removeLoading {
+	display: none;
 }

@@ -5,28 +5,18 @@ import { ProfilePicture } from "../../components";
 import { ReactComponent as Heart } from "../../assets/images/heart.svg";
 import { ReactComponent as Elipsis } from "../../assets/images/elipsis.svg";
 import { ReactComponent as SpeechBubble } from "../../assets/images/speechBubble.svg";
-
-// Each post is an <article
-// Each post is <aside
-
-// source
-// posterName
-// postImageSource
-// latestPostProfile
-// latestLikeName
-// numberOfOtherLikes
-// postDescription
-// daysAgo
+import Gray from "../../assets/images/gray.png";
+import GraySmall from "../../assets/images/graySmall.png";
 
 const Post = (props) => (
 	<article className={styles.postParent}>
 		<div className={styles.postHeader}>
 			<div className={styles.postPictureheader}>
-				{/* Turn into medium img */}
 				<ProfilePicture
-					source={props.source}
+					source={props.source || null}
 					altText="Post profile picture"
 					size="medium"
+					hasBorder={!!props.source}
 				/>
 				<p className={styles.profileName}>
 					{props.posterName}
@@ -35,7 +25,7 @@ const Post = (props) => (
 			<Elipsis />
 		</div>
 		<img
-			src={props.postImageSource}
+			src={props.postImageSource || Gray}
 			className={styles.postImage}
 			alt="Feed post"
 		/>
@@ -46,7 +36,7 @@ const Post = (props) => (
 			</div>
 			<div className={styles.likeBar}>
 				<ProfilePicture
-					source={props.latestPostProfile}
+					source={props.latestPostProfile || null}
 					size="small"
 					alt="Latest like profile"
 					hasBorder={false}
@@ -91,6 +81,17 @@ const Post = (props) => (
 	</article>
 );
 
+const SkeletonPost = () => (
+	<Post
+		latestPostProfile={""}
+		latestLikeName={""}
+		numberOfOtherLikes={""}
+		postDescription={""}
+		daysAgo={0}
+		comments={[]}
+	/>
+);
+
 const getDaysAgo = (pastDate) =>
 	moment
 		.duration(
@@ -103,11 +104,16 @@ const getDaysAgo = (pastDate) =>
 const CompilePosts = (props) =>
 	props.posts.map((post, i) => (
 		<Post
+			key={`post${i}`}
 			source={post.profile_picture}
 			posterName={post.profile_fullname}
 			postImageSource={post.post_image}
-			latestPostProfile={post.likes[0].profile_picture}
-			latestLikeName={post.likes[0].username}
+			latestPostProfile={
+				post.likes[0] ? post.likes[0].profile_picture : ""
+			}
+			latestLikeName={
+				post.likes[0] ? post.likes[0].username : ""
+			}
 			numberOfOtherLikes={post.likes.length}
 			postDescription={post.post_text}
 			daysAgo={getDaysAgo(post.date.date)}
@@ -117,7 +123,11 @@ const CompilePosts = (props) =>
 
 const Feed = (props) => (
 	<section className={styles.feedParent}>
-		<CompilePosts posts={props.posts} />
+		{props.isLoadingPosts && props.posts ? (
+			<SkeletonPost />
+		) : (
+			<CompilePosts posts={props.posts} />
+		)}
 	</section>
 );
 

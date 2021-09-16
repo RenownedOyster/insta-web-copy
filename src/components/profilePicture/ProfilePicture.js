@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ProfilePicture.module.css";
 import classNames from "classnames";
+import Skeletons from "react-loading-skeleton";
 
 const ProfilePicture = (props) => (
 	<div
