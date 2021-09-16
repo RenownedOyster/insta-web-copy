@@ -33,7 +33,7 @@ const compileStories = (results) =>
 
 const Stories = (props) => (
 	<section className={styles.storiesParent}>
-		{props.hasLoaded ? (
+		{props.hasLoadedStories ? (
 			<div className={styles.storiesChildren}>
 				{compileStories(props.activeStories)}
 			</div>
