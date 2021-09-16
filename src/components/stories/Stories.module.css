@@ -1,0 +1,29 @@
+.storiesParent {
+	min-width: 614px;
+	min-height: 84px;
+	padding: 16px 0;
+	border-radius: 3px;
+	background-color: #fff;
+	border: 1px solid #dbdbdb;
+}
+
+.nameTag {
+	font-size: 14px;
+}
+
+.pictureWithText {
+	height: 50px;
+	text-align: center;
+}
+
+.storiesChildren {
+	padding-left: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.storiesChildren > * {
+	padding-right: 35px;
+}

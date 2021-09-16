@@ -3,6 +3,7 @@ import Header from "./header/Header";
 import ProfileBar from "./profileBar/ProfileBar";
 import ProfilePicture from "./profilePicture/ProfilePicture";
 import Stories from "./stories/Stories";
+import Suggestions from "./suggestions/Suggestions";
 
 export {
 	Feed,
@@ -10,4 +11,5 @@ export {
 	ProfileBar,
 	ProfilePicture,
 	Stories,
+	Suggestions,
 };

@@ -1,4 +1,7 @@
 .headerParent {
+	position: fixed;
+	top: 0;
+	left: 0;
 	border-bottom: solid 1px rgb(190, 190, 190);
 	background-color: #fafafa;
 	display: grid;

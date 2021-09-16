@@ -1,2 +1,19 @@
 .containerParent {
+	padding-top: 75px;
+	background-color: #fafafa;
+	min-height: 100vh;
+}
+.main {
+	max-width: 946px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.feedParent {
+	min-width: 614px;
+}
+
+.asideParent {
+	min-width: 239px;
 }
