@@ -12,7 +12,7 @@ const ProfileBar = (props) => (
 			<strong>{props.username}</strong>
 			<p className={styles.fullName}>{props.fullName}</p>
 		</div>
-		<p className={styles.linkOut}>Passa a</p>
+		<strong className={styles.linkOut}>Passa a</strong>
 	</aside>
 );
 

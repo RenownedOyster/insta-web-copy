@@ -521,7 +521,7 @@ const App = () => {
 						username={mockUserData.profile_name}
 						fullName={mockUserData.full_name}
 					/>
-					<Suggestions />
+					<Suggestions profiles={stories} />
 				</aside>
 			</main>
 		</div>
