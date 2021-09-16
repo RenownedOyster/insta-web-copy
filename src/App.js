@@ -6,6 +6,7 @@ import {
 	Stories,
 	Suggestions,
 } from "./components";
+import MugShot from "./assets/images/tony.png";
 
 const posts = [
 	{
@@ -497,17 +498,29 @@ const stories = [
 	},
 ];
 
+const mockUserData = {
+	profile_name: "tnybtlr",
+	full_name: "Tony Butler",
+	profile_picture: MugShot,
+};
+
 const App = () => {
 	return (
 		<div className={styles.containerParent}>
-			<Header />
+			<Header
+				profilePicture={mockUserData.profile_picture}
+			/>
 			<main className={styles.main}>
 				<section className={styles.feedParent}>
 					<Stories hasLoaded activeStories={stories} />
 					<Feed posts={posts} />
 				</section>
 				<aside className={styles.asideParent}>
-					<ProfileBar />
+					<ProfileBar
+						pictureSource={mockUserData.profile_picture}
+						username={mockUserData.profile_name}
+						fullName={mockUserData.full_name}
+					/>
 					<Suggestions />
 				</aside>
 			</main>

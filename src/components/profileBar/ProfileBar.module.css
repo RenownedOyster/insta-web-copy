@@ -1,0 +1,22 @@
+.profileBarParent {
+	width: 293px;
+	height: 56px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.fullName {
+	margin-top: 5px !important;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.linkOut {
+	color: #0095f6;
+}
+
+.names {
+	margin-top: 5%;
+}

@@ -5,7 +5,7 @@ import { ReactComponent as Heart } from "../../assets/images/heart.svg";
 import { ReactComponent as Home } from "../../assets/images/home.svg";
 import Logo from "../../assets/images/logo.png";
 
-const Header = () => (
+const Header = (props) => (
 	<header className={styles.headerParent}>
 		<div className={styles.headerBar}>
 			<img src={Logo} alt="logo" className={styles.logo} />
@@ -19,9 +19,7 @@ const Header = () => (
 				<Home />
 				<ProfilePicture
 					size="small"
-					source={
-						"https://flynn.boolean.careers/exercises/img/boolgram/profile1.jpg"
-					}
+					source={props.profilePicture}
 					hasBorder={false}
 					altText="Heading profile picture"
 				/>
